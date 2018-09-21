@@ -54,7 +54,7 @@ angular.module('ngIntlTelInput')
             elm[0].value = (elm.intlTelInput('getNumber') || val);
           }
           scope.$watch(function() {return elm[0].value}, update, true)
-          scope.$watch(function() {return elm.intlTelInput('getSelectedCountryData')}, function(country) {update(country.dialCode)}, true)
+          scope.$watch(function() {return elm.intlTelInput('getSelectedCountryData')}, function(country) {update(elm[0].value)}, true)
         }
       };
     }]);

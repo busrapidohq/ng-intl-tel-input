@@ -1,6 +1,6 @@
 {
   "name": "ng-intl-tel-input",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "AngularJS directive implementing intl-tel-input (https://github.com/Bluefieldscom/intl-tel-input)",
   "main": "dist/ng-intl-tel-input.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "start": "nohup http-server",
     "jshint": "jshint .",
     "karma": "karma start karma.conf.js",
-    "concat": "node ./node_modules/concat-cli/index.js -f ng-intl-tel-input.{module,provider,directive}.js -o dist/ng-intl-tel-input.js",
+    "concat": "node ./node_modules/concat-cli/index.js -f ng-intl-tel-input.module.js -f ng-intl-tel-input.provider.js -f ng-intl-tel-input.directive.js -o dist/ng-intl-tel-input.js",
     "uglify": "cat dist/ng-intl-tel-input.js > dist/ng-intl-tel-input.min.js",
     "webdriver-update": "webdriver-manager update",
     "protractor": "protractor protractor.conf.js",

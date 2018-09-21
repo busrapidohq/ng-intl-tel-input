@@ -49,6 +49,17 @@ angular.module('ngIntlTelInput')
             angular.element($window).on('countrychange', handleCountryChange);
             scope.$on('$destroy', cleanUp);
           }
+
+          // Set input value to model value and trigger evaluation.
+          ctrl.$formatters.push(function (value) {
+            if (value) {
+              if(value.charAt(0) !== '+') {
+                value = '+' + value;
+              }
+              elm.intlTelInput('setNumber', value);
+            }
+            return value;
+          });
           function update(val) {
             ctrl.$setViewValue(elm.intlTelInput('getNumber') || val);
             elm[0].value = (elm.intlTelInput('getNumber') || val);
